@@ -1,25 +1,25 @@
 %global commit d89ab913ab
 %global longcommit d89ab913abdd90e559e48a38a07fd571cbf8a607
 
-Name:		emulationstation
-Version:	1.0.2
-Release:	1.%{commit}%{?dist}
-Summary:	Graphical front-end for emulators with controller navigation
+Name:           emulationstation
+Version:        2.0.0
+Release:        0.1.rc1%{?dist}
+Summary:        Graphical front-end for emulators with controller navigation
 
-Group:		Applications/Emulators
+Group:          Applications/Emulators
 License:        BSD and ASL 2.0 and MIT
-URL:		http://emulationstation.org/
-Source0:	https://github.com/Aloshi/EmulationStation/archive/%{commit}.tar.gz
+URL:            http://emulationstation.org/
+Source0:        https://github.com/Aloshi/EmulationStation/archive/%{commit}.tar.gz
 Source1:        http://emulationstation.org/downloads/themes/simple_latest.zip
 
-BuildRequires:	cmake
-BuildRequires:	SDL2-devel
-BuildRequires:	boost-devel
-BuildRequires:	freeimage-devel
-BuildRequires:	freetype-devel
-BuildRequires:	eigen3-devel
-BuildRequires:	curl-devel
-BuildRequires:	mesa-libGL-devel
+BuildRequires:  cmake
+BuildRequires:  SDL2-devel
+BuildRequires:  boost-devel
+BuildRequires:  freeimage-devel
+BuildRequires:  freetype-devel
+BuildRequires:  eigen3-devel
+BuildRequires:  curl-devel
+BuildRequires:  mesa-libGL-devel
 
 %description
 Graphical front-end for emulators with controller navigation.
