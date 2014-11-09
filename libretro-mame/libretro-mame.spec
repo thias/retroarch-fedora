@@ -12,6 +12,7 @@ Group:          Applications/Emulators
 License:        MAME
 URL:            https://github.com/libretro/%{core_name}
 Source0:        https://github.com/libretro/%{core_name}/archive/%{commit}.tar.gz
+Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/mame_libretro.info
 
 BuildRequires:  python
 
@@ -30,10 +31,12 @@ make -f Makefile.libretro %{?_smp_mflags}
 %install
 install -D -m 0755 %{core_name}_libretro.so \
   %{buildroot}%{_libexecdir}/libretro/%{core_name}.so
+install -p -m 0644 %{SOURCE1} \
+  %{buildroot}%{_libexecdir}/libretro/%{core_name}.info
 
 
 %files
-%doc README
+%doc README.md
 %{_libexecdir}/libretro/
 
 

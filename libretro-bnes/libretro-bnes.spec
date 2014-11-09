@@ -12,6 +12,7 @@ Group:          Applications/Emulators
 License:        GPLv3
 URL:            https://github.com/libretro/%{core_name}-libretro
 Source0:        https://github.com/libretro/%{core_name}-libretro/archive/%{commit}.tar.gz
+Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/bnes_libretro.info
 
 %description
 Libretro %{core_name} core.
@@ -28,6 +29,8 @@ make %{?_smp_mflags}
 %install
 install -D -m 0755 libretro.so \
   %{buildroot}%{_libexecdir}/libretro/%{core_name}.so
+install -p -m 0644 %{SOURCE1} \
+  %{buildroot}%{_libexecdir}/libretro/%{core_name}.info
 
 
 %files
