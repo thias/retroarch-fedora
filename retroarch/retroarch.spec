@@ -12,6 +12,7 @@ URL:            http://www.libretro.com/
 Source0:        https://github.com/libretro/RetroArch/archive/%{commit}.tar.gz
 
 BuildRequires:  libX11-devel
+BuildRequires:  libXv-devel
 BuildRequires:  libxml2-devel
 BuildRequires:  mesa-libEGL-devel
 BuildRequires:  alsa-lib-devel
@@ -49,6 +50,8 @@ make %{?_smp_mflags}
 make install DESTDIR=%{buildroot}
 install -m 0755 tools/retroarch-joyconfig \
   %{buildroot}%{_prefix}/bin/retroarch-joyconfig
+sed -i 's|^# libretro_directory.*|libretro_directory = /usr/libexec/libretro|' \
+  %{buildroot}/etc/retroarch.cfg
 
 
 %files
