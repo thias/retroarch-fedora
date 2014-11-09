@@ -10,6 +10,7 @@ Group:          Applications/Emulators
 License:        ?
 URL:            http://www.libretro.com/
 Source0:        https://github.com/libretro/retroarch-joypad-autoconfig/archive/%{commit}.tar.gz
+Patch0:         retroarch-joypad-autoconfig-exit-on-select-start.patch
 
 Requires:       retroarch
 
@@ -18,6 +19,7 @@ Joypad automatic configuration data files for RetroArch.
 
 %prep
 %setup -q -n retroarch-joypad-autoconfig-%{longcommit}
+%patch0 -p1
 
 
 %build
@@ -25,7 +27,7 @@ Joypad automatic configuration data files for RetroArch.
 
 %install
 mkdir -p %{buildroot}/etc/retroarch/joypad
-install -p -m 0644 udev/* %{buildroot}/etc/retroarch/joypad/
+install -p -m 0644 udev/*.cfg %{buildroot}/etc/retroarch/joypad/
 
 
 %files
