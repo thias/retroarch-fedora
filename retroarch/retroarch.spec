@@ -50,13 +50,17 @@ make %{?_smp_mflags}
 make install DESTDIR=%{buildroot}
 install -m 0755 tools/retroarch-joyconfig \
   %{buildroot}%{_prefix}/bin/retroarch-joyconfig
-sed -i 's|^# libretro_directory.*|libretro_directory = /usr/libexec/libretro|' \
+# Configuration changes
+sed -i \
+  's|^# libretro_directory.*|libretro_directory = "/usr/libexec/libretro"|;
+   s|^# libretro_info_path.*|libretro_info_path = "/usr/libexec/libretro"|;
+   s|^# joypad_autoconfig_dir.*|joypad_autoconfig_dir = "/etc/retroarch/joypad"|' \
   %{buildroot}/etc/retroarch.cfg
 
 
 %files
 %doc README.md
-%config(noreplace) /etc/retroarch.cfg
+%config /etc/retroarch.cfg
 %{_prefix}/bin/retroarch
 %{_prefix}/bin/retroarch-cg2glsl
 %{_prefix}/bin/retroarch-joyconfig
