@@ -59,8 +59,11 @@ rm -rf ~/.config/retroarch
 * Look at what useful things RetroPie does and include them : https://github.com/petrockblog/RetroPie-Setup
 * Include more cores, ArchLinux PKGBUILD files are useful to know how to build (which Makefile to use, etc.) : https://aur.archlinux.org/packages/li/libretro-scummvm-git/PKGBUILD
 * Find out which subprojects are useful and package them too :
-** `libretro/common-shaders.git`
-** `libretro/common-overlays.git`
-** `libretro/retroarch-assets.git`
-** `libretro/retroarch-joypad-autoconfig.git` (done, very useful!)
+ * `libretro/common-shaders.git`
+ * `libretro/common-overlays.git`
+ * `libretro/retroarch-assets.git`
+ * `libretro/retroarch-joypad-autoconfig.git` (done, very useful!)
+
+* Disable default input_toggle_fast_forward = "space" !!
+* Find out how to hide neogeo.zip and qsound.zip
 
