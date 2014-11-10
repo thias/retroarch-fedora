@@ -1,0 +1,71 @@
+#!/bin/bash
+#
+# Stupid script to get things working for me :-)
+#
+
+cat > /etc/pki/rpm-gpg/RPM-GPG-KEY-matthias << EOF
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+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
+=Aw90
+-----END PGP PUBLIC KEY BLOCK-----
+EOF
+
+cat > /etc/yum.repos.d/marmotte.repo << 'EOF'
+[marmotte]
+name=Fedora $releasever - $basearch - Marmotte
+baseurl=http://dl.marmotte.net/rpms/fedora/$releasever/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-matthias
+
+EOF
+
+yum install emulationstation 'libretro*' 'retroarch*'
+
