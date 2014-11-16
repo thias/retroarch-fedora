@@ -1,13 +1,13 @@
-%global commit 47b014d3cd
-%global longcommit 47b014d3cdb7ce4170c85d23f4d4ed244025ef73
+%global commit 436c0407a4
+%global longcommit 436c0407a4fb7c49037d87e754d87ed1a2142937
 
 Name:           retroarch
-Version:        0
+Version:        1.0.0.3
 Release:        0.1.%{commit}%{?dist}
 Summary:        Official reference frontend for libretro
 
 Group:          Applications/Emulators
-License:        ?
+License:        GPLv3+
 URL:            http://www.libretro.com/
 Source0:        https://github.com/libretro/RetroArch/archive/%{commit}.tar.gz
 
@@ -69,6 +69,9 @@ sed -i \
 
 
 %changelog
+* Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 1.0.0.3-0.1.436c0407a4
+- Update and set version to what makes the most sense.
+
 * Sat Nov 08 2014 Matthias Saou <matthias@saou.eu> 0-0.1.47b014d3cd
 - Initial RPM release.
 
