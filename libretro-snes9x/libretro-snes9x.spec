@@ -1,17 +1,12 @@
-%global commit e62b25975d
-%global longcommit e62b25975d0c9125bfb9b476063eafe5a50065ac
-
-%global core_name snes9x
-
-Name:           libretro-%{core_name}
-Version:        0
-Release:        0.1.%{commit}1%{?dist}
-Summary:        Libretro %{core_name} core
+Name:           libretro-snes9x
+Version:        1.53
+Release:        1.85ceb4bf4a%{?dist}
+Summary:        Libretro snes9x core
 
 Group:          Applications/Emulators
 License:        GPLv2 and LGPLv2.1
-URL:            https://github.com/libretro/%{core_name}
-Source0:        https://github.com/libretro/%{core_name}/archive/%{commit}.tar.gz
+URL:            https://github.com/libretro/snes9x
+Source0:        https://github.com/libretro/snes9x/archive/85ceb4bf4a.tar.gz
 Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/snes9x_libretro.info
 
 BuildRequires:  zlib-devel
@@ -20,11 +15,11 @@ BuildRequires:  libX11-devel
 BuildRequires:  libXext-devel
 
 %description
-Libretro %{core_name} core.
+Libretro snes9x core.
 
 
 %prep
-%setup -q -n %{core_name}-%{longcommit}
+%setup -q -n snes9x-85ceb4bf4a8e95637415b0c708e4c8ac0e86565d
 
 
 %build
@@ -32,10 +27,10 @@ make -C libretro %{?_smp_mflags}
 
 
 %install
-install -D -m 0755 libretro/%{core_name}_libretro.so \
-  %{buildroot}%{_libexecdir}/libretro/%{core_name}.so
+install -D -m 0755 libretro/snes9x_libretro.so \
+  %{buildroot}%{_libexecdir}/libretro/snes9x.so
 install -p -m 0644 %{SOURCE1} \
-  %{buildroot}%{_libexecdir}/libretro/%{core_name}.info
+  %{buildroot}%{_libexecdir}/libretro/snes9x.info
 
 
 %files
@@ -44,6 +39,9 @@ install -p -m 0644 %{SOURCE1} \
 
 
 %changelog
+* Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 1.53-1.85ceb4bf4a
+- Set correct version.
+
 * Sat Nov 08 2014 Matthias Saou <matthias@saou.eu> 0-0.1.e62b25975d
 - Initial RPM release.
 

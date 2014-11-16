@@ -1,0 +1,65 @@
+<% if @commit %>
+<% scommit = @commit[0,10] %>
+<% end %>
+<% if @urlname %>
+<% name = @urlname %>
+<% else %>
+<% name = @name %>
+<% end %>
+Name:           libretro-<%= @name %>
+Version:        <%= @version %>
+Release:        <%= @release %><% if @commit %>.<%= scommit %><% end %>%{?dist}
+Summary:        Libretro <%= @name %> core
+
+Group:          Applications/Emulators
+License:        <%= @license %>
+<% if @url %>
+URL:            <%= @url %>
+<% else %>
+URL:            https://github.com/libretro/<%= name %>
+<% end %>
+<% if @source0 %>
+Source0:        <%= @source0 %>
+<% else %>
+Source0:        https://github.com/libretro/<%= name %>/archive/<%= scommit %>.tar.gz
+<% end %>
+Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/<%= @name %>_libretro.info
+
+<% @buildrequires.each do |br| %>
+BuildRequires:  <%= br %>
+<% end %>
+
+%description
+Libretro <%= @name %> core.
+
+
+%prep
+%setup -q -n <%= name %>-<%= @commit %>
+
+
+%build
+<% @build.each do |line| %>
+<%= line %>
+<% end %>
+
+
+
+%install
+<% if @install_lib %>
+install -D -m 0755 <%= @install_lib %> \
+<% else %>
+install -D -m 0755 <%= @name %>_libretro.so \
+<% end %>
+  %{buildroot}%{_libexecdir}/libretro/<%= @name %>.so
+install -p -m 0644 %{SOURCE1} \
+  %{buildroot}%{_libexecdir}/libretro/<%= @name %>.info
+
+
+%files
+<% @doc.each do |file| %>
+%doc <%= file %>
+<% end %>
+%{_libexecdir}/libretro/
+
+
+%changelog<%= @changelog %>
