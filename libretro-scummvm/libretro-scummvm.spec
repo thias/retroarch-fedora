@@ -1,17 +1,12 @@
-%global commit 7dc8e24f17
-%global longcommit 7dc8e24f1759dfca852014451dfca9103d8b1f04
-
-%global core_name scummvm
-
-Name:           libretro-%{core_name}
-Version:        0
-Release:        0.1.%{commit}1%{?dist}
-Summary:        Libretro %{core_name} core
+Name:           libretro-scummvm
+Version:        1.7.0
+Release:        1.228def6913%{?dist}
+Summary:        Libretro scummvm core
 
 Group:          Applications/Emulators
-License:        BSD and LGPL
-URL:            https://github.com/libretro/%{core_name}
-Source0:        https://github.com/libretro/%{core_name}/archive/%{commit}.tar.gz
+License:        GPLv2+
+URL:            https://github.com/libretro/scummvm
+Source0:        https://github.com/libretro/scummvm/archive/228def6913.tar.gz
 Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/scummvm_libretro.info
 
 BuildRequires:  SDL-devel
@@ -20,11 +15,11 @@ BuildRequires:  nasm
 BuildRequires:  readline-devel
 
 %description
-Libretro %{core_name} core.
+Libretro scummvm core.
 
 
 %prep
-%setup -q -n %{core_name}-%{longcommit}
+%setup -q -n scummvm-228def6913594dd01770c44f6a516908877878f4
 
 
 %build
@@ -32,10 +27,10 @@ make -C backends/platform/libretro/build %{?_smp_mflags}
 
 
 %install
-install -D -m 0755 backends/platform/libretro/build/%{core_name}_libretro.so \
-  %{buildroot}%{_libexecdir}/libretro/%{core_name}.so
+install -D -m 0755 backends/platform/libretro/build/scummvm_libretro.so \
+  %{buildroot}%{_libexecdir}/libretro/scummvm.so
 install -p -m 0644 %{SOURCE1} \
-  %{buildroot}%{_libexecdir}/libretro/%{core_name}.info
+  %{buildroot}%{_libexecdir}/libretro/scummvm.info
 
 
 %files
@@ -44,6 +39,9 @@ install -p -m 0644 %{SOURCE1} \
 
 
 %changelog
+* Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 1.7.0-1.228def6913
+- Set correct version.
+
 * Sat Nov 08 2014 Matthias Saou <matthias@saou.eu> 0-0.1.7dc8e24f17
 - Initial RPM release.
 
