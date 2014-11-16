@@ -1,12 +1,12 @@
 Name:           libretro-bnes
 Version:        1
-Release:        1.d2aba49db2%{?dist}
+Release:        1.86b2aafbda%{?dist}
 Summary:        Libretro bnes core
 
 Group:          Applications/Emulators
 License:        GPLv3
 URL:            https://github.com/libretro/bnes-libretro
-Source0:        https://github.com/libretro/bnes-libretro/archive/d2aba49db2.tar.gz
+Source0:        https://github.com/libretro/bnes-libretro/archive/86b2aafbda.tar.gz
 Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/bnes_libretro.info
 
 
@@ -15,7 +15,7 @@ Libretro bnes core.
 
 
 %prep
-%setup -q -n bnes-libretro-d2aba49db2e027767463409d630bfa8e2a0aa0dc
+%setup -q -n bnes-libretro-86b2aafbda5a79a33a3ca69ee5c54a8657798dab
 
 
 %build
