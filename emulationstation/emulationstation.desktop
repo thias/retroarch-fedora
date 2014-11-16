@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=EmulationStation
+GenericName=Emulator Front-end
+Comment=Graphical front-end for emulators with controller navigation
+Exec=emulationstation
+Icon=emulationstation
+Terminal=false
+Type=Application
+Categories=Game;Emulator;
