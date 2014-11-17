@@ -10,7 +10,7 @@ require 'erb'
   'zlib-devel',
 ]
 @build = [
-  'make %{?_smp_mflags}',
+  'make -f Makefile.libretro %{?_smp_mflags}',
 ]
 #@install_lib = 'libretro/' + @name + '_libretro.so'
 @doc = [
