@@ -1,9 +1,10 @@
-diff -Naupr retroarch-joypad-autoconfig-7a6e3a9fece826db540f89abcbdb57737e0f454d.orig/udev/HuiJia__USB_GamePad.cfg retroarch-joypad-autoconfig-7a6e3a9fece826db540f89abcbdb57737e0f454d/udev/HuiJia__USB_GamePad.cfg
---- retroarch-joypad-autoconfig-7a6e3a9fece826db540f89abcbdb57737e0f454d.orig/udev/HuiJia__USB_GamePad.cfg	2014-10-15 00:26:41.000000000 +0200
-+++ retroarch-joypad-autoconfig-7a6e3a9fece826db540f89abcbdb57737e0f454d/udev/HuiJia__USB_GamePad.cfg	2014-11-09 15:12:51.995789866 +0100
-@@ -12,3 +12,5 @@ input_a_btn = "1"
- input_x_btn = "0"
- input_l_btn = "6"
- input_r_btn = "7"
+diff -Naupr retroarch-joypad-autoconfig-34af70c2bb9b4c205c0f7c152c95dd1749bd7531.orig/udev/HuiJia__USB_GamePad.cfg retroarch-joypad-autoconfig-34af70c2bb9b4c205c0f7c152c95dd1749bd7531/udev/HuiJia__USB_GamePad.cfg
+--- retroarch-joypad-autoconfig-34af70c2bb9b4c205c0f7c152c95dd1749bd7531.orig/udev/HuiJia__USB_GamePad.cfg	2014-12-19 23:00:26.000000000 +0100
++++ retroarch-joypad-autoconfig-34af70c2bb9b4c205c0f7c152c95dd1749bd7531/udev/HuiJia__USB_GamePad.cfg	2014-12-24 20:55:56.400017237 +0100
+@@ -25,3 +25,6 @@ input_a_btn_label = "A"
+ input_x_btn_label = "X"
+ input_l_btn_label = "L"
+ input_r_btn_label = "R"
++
 +input_enable_hotkey_btn = "8"
 +input_exit_emulator_btn = "9"

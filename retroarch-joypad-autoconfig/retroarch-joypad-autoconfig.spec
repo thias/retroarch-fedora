@@ -1,9 +1,9 @@
-%global commit 7a6e3a9fec
-%global longcommit 7a6e3a9fece826db540f89abcbdb57737e0f454d
+%global commit 34af70c2bb
+%global longcommit 34af70c2bb9b4c205c0f7c152c95dd1749bd7531
 
 Name:           retroarch-joypad-autoconfig
 Version:        0
-Release:        0.1.%{commit}%{?dist}
+Release:        0.2.%{commit}%{?dist}
 Summary:        Joypad automatic configuration data files for RetroArch
 
 Group:          Applications/Emulators
@@ -37,6 +37,9 @@ install -p -m 0644 udev/*.cfg %{buildroot}/etc/retroarch/joypad/
 
 
 %changelog
+* Wed Dec 24 2014 Matthias Saou <matthias@saou.eu> 0-0.2.34af70c2bb
+- Update to latest git code.
+
 * Sun Nov 09 2014 Matthias Saou <matthias@saou.eu> 0-0.1.7a6e3a9fec
 - Initial RPM release.
 
