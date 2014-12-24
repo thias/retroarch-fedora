@@ -1,5 +1,5 @@
-%global commit 436c0407a4
-%global longcommit 436c0407a4fb7c49037d87e754d87ed1a2142937
+%global commit 8b41762639
+%global longcommit 8b4176263988e750daf0c6d709fdceb4672e111e
 
 Name:           retroarch
 Version:        1.0.0.3
@@ -69,6 +69,9 @@ sed -i \
 
 
 %changelog
+* Wed Dec 24 2014 Matthias Saou <matthias@saou.eu> 1.0.0.3-0.2.8b41762639
+- Update to latest git code.
+
 * Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 1.0.0.3-0.1.436c0407a4
 - Update and set version to what makes the most sense.
 
