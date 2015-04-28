@@ -4,7 +4,7 @@ require 'erb'
 @urlname = 'Genesis-Plus-GX'
 @commit = 'c61817699d383072c7c6810177ddc7f5888ba65d'
 @version = '1.7.4'
-@release = '1'
+@release = '2'
 @license = 'Non Commercial'
 @buildrequires = [
   'zlib-devel',

@@ -3,7 +3,7 @@ require 'erb'
 @name = 'mame'
 @commit = '5074d3c409a7475107c7734ca76fd01adba03c6c'
 @version = '0.155'
-@release = '1'
+@release = '2'
 @license = 'MAME'
 @buildrequires = [
   'python',

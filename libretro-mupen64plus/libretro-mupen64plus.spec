@@ -1,13 +1,13 @@
 Name:           libretro-mupen64plus
 Version:        2.0
-Release:        1.114ddec34a%{?dist}
+Release:        2.114ddec34a%{?dist}
 Summary:        Libretro mupen64plus core
 
 Group:          Applications/Emulators
 License:        GPLv2
 URL:            https://github.com/libretro/mupen64plus-libretro
 Source0:        https://github.com/libretro/mupen64plus-libretro/archive/114ddec34a.tar.gz
-Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/mupen64plus_libretro.info
+Source1:        https://raw.githubusercontent.com/libretro/libretro-super/master/dist/info/mupen64plus_libretro.info
 
 BuildRequires:  SDL-devel
 BuildRequires:  libpng-devel

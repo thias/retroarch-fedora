@@ -3,7 +3,7 @@ require 'erb'
 @name = 'scummvm'
 @commit = '228def6913594dd01770c44f6a516908877878f4'
 @version = '1.7.0'
-@release = '1'
+@release = '2'
 @license = 'GPLv2+'
 @buildrequires = [
   'SDL-devel',

@@ -1,13 +1,13 @@
 Name:           libretro-snes9x_next
 Version:        1.52
-Release:        1.d2aba49db2%{?dist}
+Release:        2.d2aba49db2%{?dist}
 Summary:        Libretro snes9x_next core
 
 Group:          Applications/Emulators
 License:        GPLv2 and LGPLv2.1
 URL:            https://github.com/libretro/snes9x-next
 Source0:        https://github.com/libretro/snes9x-next/archive/d2aba49db2.tar.gz
-Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/snes9x_next_libretro.info
+Source1:        https://raw.githubusercontent.com/libretro/libretro-super/master/dist/info/snes9x_next_libretro.info
 
 BuildRequires:  zlib-devel
 BuildRequires:  libpng-devel

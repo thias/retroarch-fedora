@@ -4,7 +4,7 @@ require 'erb'
 @urlname = 'snes9x-next'
 @commit = 'd2aba49db2e027767463409d630bfa8e2a0aa0dc'
 @version = '1.52'
-@release = '1'
+@release = '2'
 @license = 'GPLv2 and LGPLv2.1'
 @buildrequires = [
   'zlib-devel',

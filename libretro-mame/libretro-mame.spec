@@ -1,13 +1,13 @@
 Name:           libretro-mame
 Version:        0.155
-Release:        1.5074d3c409%{?dist}
+Release:        2.5074d3c409%{?dist}
 Summary:        Libretro mame core
 
 Group:          Applications/Emulators
 License:        MAME
 URL:            https://github.com/libretro/mame
 Source0:        https://github.com/libretro/mame/archive/5074d3c409.tar.gz
-Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/mame_libretro.info
+Source1:        https://raw.githubusercontent.com/libretro/libretro-super/master/dist/info/mame_libretro.info
 
 BuildRequires:  python
 

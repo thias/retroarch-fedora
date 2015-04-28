@@ -4,7 +4,7 @@ require 'erb'
 @urlname = 'mupen64plus-libretro'
 @commit = '114ddec34aba8c82e10ff0d109803c5ee6591589'
 @version = '2.0'
-@release = '1'
+@release = '2'
 @license = 'GPLv2'
 @buildrequires = [
   'SDL-devel',

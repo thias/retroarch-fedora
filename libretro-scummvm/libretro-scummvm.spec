@@ -1,13 +1,13 @@
 Name:           libretro-scummvm
 Version:        1.7.0
-Release:        1.228def6913%{?dist}
+Release:        2.228def6913%{?dist}
 Summary:        Libretro scummvm core
 
 Group:          Applications/Emulators
 License:        GPLv2+
 URL:            https://github.com/libretro/scummvm
 Source0:        https://github.com/libretro/scummvm/archive/228def6913.tar.gz
-Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/scummvm_libretro.info
+Source1:        https://raw.githubusercontent.com/libretro/libretro-super/master/dist/info/scummvm_libretro.info
 
 BuildRequires:  SDL-devel
 BuildRequires:  freetype-devel

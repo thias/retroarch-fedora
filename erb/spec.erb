@@ -23,7 +23,7 @@ Source0:        <%= @source0 %>
 <% else %>
 Source0:        https://github.com/libretro/<%= name %>/archive/<%= scommit %>.tar.gz
 <% end %>
-Source1:        https://github.com/libretro/libretro-super/blob/master/dist/info/<%= @name %>_libretro.info
+Source1:        https://raw.githubusercontent.com/libretro/libretro-super/master/dist/info/<%= @name %>_libretro.info
 
 <% @buildrequires.each do |br| %>
 BuildRequires:  <%= br %>
