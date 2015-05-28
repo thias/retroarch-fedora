@@ -1,9 +1,9 @@
-%global commit c48f1784c5
-%global longcommit c48f1784c56a471f3a42fbca8833305fa39daec6
+%global commit 646bede3d9
+%global longcommit 646bede3d9ec0acf0ae378415edac136774a66c5
 
 Name:           emulationstation
-Version:        2.0.0
-Release:        0.3.rc1%{?dist}
+Version:        2.0.1a
+Release:        1%{?dist}
 Summary:        Graphical front-end for emulators with controller navigation
 
 Group:          Applications/Emulators
@@ -77,6 +77,9 @@ fi
 
 
 %changelog
+* Thu May 28 2015 Matthias Saou <matthias@saou.eu> 2.0.1a-1
+- Update to the latest 646bede3d9.
+
 * Tue Dec 23 2014 Matthias Saou <matthias@saou.eu> 2.0.0-0.3.rc1
 - Update to c48f1784c5 which adds vsync.
 
