@@ -1,12 +1,12 @@
 Name:           libretro-genesis_plus_gx
 Version:        1.7.4
-Release:        2.c61817699d%{?dist}
+Release:        3.7d8d5f1026%{?dist}
 Summary:        Libretro genesis_plus_gx core
 
 Group:          Applications/Emulators
 License:        Non Commercial
 URL:            https://github.com/libretro/Genesis-Plus-GX
-Source0:        https://github.com/libretro/Genesis-Plus-GX/archive/c61817699d.tar.gz
+Source0:        https://github.com/libretro/Genesis-Plus-GX/archive/7d8d5f1026.tar.gz
 Source1:        https://raw.githubusercontent.com/libretro/libretro-super/master/dist/info/genesis_plus_gx_libretro.info
 
 BuildRequires:  zlib-devel
@@ -16,7 +16,7 @@ Libretro genesis_plus_gx core.
 
 
 %prep
-%setup -q -n Genesis-Plus-GX-c61817699d383072c7c6810177ddc7f5888ba65d
+%setup -q -n Genesis-Plus-GX-7d8d5f1026af8cfd00cdf32c67a999bd1e454a09
 
 
 %build

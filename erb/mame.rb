@@ -1,11 +1,12 @@
 require 'erb'
 
 @name = 'mame'
-@commit = '5074d3c409a7475107c7734ca76fd01adba03c6c'
-@version = '0.155'
-@release = '2'
+@commit = 'a9d5a09ae9d6bfbc21450d57c07342de01a63583'
+@version = '0.166'
+@release = '1'
 @license = 'MAME'
 @buildrequires = [
+  'alsa-lib-devel',
   'python',
 ]
 @build = [
@@ -15,6 +16,10 @@ require 'erb'
   'README.md',
 ]
 @changelog = '
+* Sun Nov 22 2015 Matthias Saou <matthias@saou.eu> 0.166-1.a9d5a09ae9
+- Update to latest git code.
+- Add missing alsa-lib-devel build requirement.
+
 * Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 0.155-1.c7ebbc3efe
 - Set correct version.
 

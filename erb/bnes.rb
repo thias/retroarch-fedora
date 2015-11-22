@@ -2,9 +2,9 @@ require 'erb'
 
 @name = 'bnes'
 @urlname = 'bnes-libretro'
-@commit = '86b2aafbda5a79a33a3ca69ee5c54a8657798dab'
+@commit = '0e30b99baf08fe40162d71097249e84a0c6c7c21'
 @version = '1'
-@release = '2'
+@release = '3'
 @license = 'GPLv3'
 #@url = ''
 @buildrequires = []

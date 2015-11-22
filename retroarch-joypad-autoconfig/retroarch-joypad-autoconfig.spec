@@ -1,9 +1,9 @@
-%global commit 34af70c2bb
-%global longcommit 34af70c2bb9b4c205c0f7c152c95dd1749bd7531
+%global commit b5dbd19aaf
+%global longcommit b5dbd19aafbc0fcd7a5c85f745b163f14ba4914f
 
 Name:           retroarch-joypad-autoconfig
 Version:        0
-Release:        0.2.%{commit}%{?dist}
+Release:        0.3.%{commit}%{?dist}
 Summary:        Joypad automatic configuration data files for RetroArch
 
 Group:          Applications/Emulators
@@ -12,6 +12,7 @@ URL:            http://www.libretro.com/
 Source0:        https://github.com/libretro/retroarch-joypad-autoconfig/archive/%{commit}.tar.gz
 Patch0:         retroarch-joypad-autoconfig-exit-on-select-start.patch
 
+BuildArch:      noarch
 Requires:       retroarch
 
 %description
@@ -37,6 +38,10 @@ install -p -m 0644 udev/*.cfg %{buildroot}/etc/retroarch/joypad/
 
 
 %changelog
+* Sun Nov 22 2015 Matthias Saou <matthias@saou.eu> 0-0.3.b5dbd19aaf
+- Update to latest git code.
+- Make package noarch.
+
 * Wed Dec 24 2014 Matthias Saou <matthias@saou.eu> 0-0.2.34af70c2bb
 - Update to latest git code.
 

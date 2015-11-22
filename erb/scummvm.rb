@@ -1,9 +1,9 @@
 require 'erb'
 
 @name = 'scummvm'
-@commit = '228def6913594dd01770c44f6a516908877878f4'
-@version = '1.7.0'
-@release = '2'
+@commit = 'c3e719acc08c1873609bab3578939b7c9e606511'
+@version = '1.8.0'
+@release = '0.1'
 @license = 'GPLv2+'
 @buildrequires = [
   'SDL-devel',
@@ -19,6 +19,9 @@ require 'erb'
   'README COPY*',
 ]
 @changelog = '
+* Sun Nov 22 2015 Matthias Saou <matthias@saou.eu> 1.8.0-0.1.c3e719acc0
+- Update to latest git code.
+
 * Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 1.7.0-1.228def6913
 - Set correct version.
 

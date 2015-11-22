@@ -2,9 +2,9 @@ require 'erb'
 
 @name = 'mupen64plus'
 @urlname = 'mupen64plus-libretro'
-@commit = '114ddec34aba8c82e10ff0d109803c5ee6591589'
+@commit = '7db9296453629a44de806589f3ff64e824e775ad'
 @version = '2.0'
-@release = '2'
+@release = '3'
 @license = 'GPLv2'
 @buildrequires = [
   'SDL-devel',
@@ -19,6 +19,9 @@ require 'erb'
   'mupen64plus-core/README',
 ]
 @changelog = '
+* Sun Nov 22 2015 Matthias Saou <matthias@saou.eu> 2.0-1.7db9296453
+- Update to latest git code.
+
 * Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 2.0-1.114ddec34a
 - Initial RPM release.
 '

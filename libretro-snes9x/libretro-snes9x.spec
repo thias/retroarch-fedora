@@ -1,12 +1,12 @@
 Name:           libretro-snes9x
 Version:        1.53
-Release:        2.85ceb4bf4a%{?dist}
+Release:        3.ccf1ee2eae%{?dist}
 Summary:        Libretro snes9x core
 
 Group:          Applications/Emulators
 License:        GPLv2 and LGPLv2.1
 URL:            https://github.com/libretro/snes9x
-Source0:        https://github.com/libretro/snes9x/archive/85ceb4bf4a.tar.gz
+Source0:        https://github.com/libretro/snes9x/archive/ccf1ee2eae.tar.gz
 Source1:        https://raw.githubusercontent.com/libretro/libretro-super/master/dist/info/snes9x_libretro.info
 
 BuildRequires:  zlib-devel
@@ -19,7 +19,7 @@ Libretro snes9x core.
 
 
 %prep
-%setup -q -n snes9x-85ceb4bf4a8e95637415b0c708e4c8ac0e86565d
+%setup -q -n snes9x-ccf1ee2eae73ed1e4044c8dd9536dd4ac1be6d8b
 
 
 %build
@@ -39,6 +39,9 @@ install -p -m 0644 %{SOURCE1} \
 
 
 %changelog
+* Sun Nov 22 2015 Matthias Saou <matthias@saou.eu> 1.53-3.ccf1ee2eae
+- Update to latest git code.
+
 * Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 1.53-1.85ceb4bf4a
 - Set correct version.
 

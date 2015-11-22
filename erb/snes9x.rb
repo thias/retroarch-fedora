@@ -1,9 +1,9 @@
 require 'erb'
 
 @name = 'snes9x'
-@commit = '85ceb4bf4a8e95637415b0c708e4c8ac0e86565d'
+@commit = 'ccf1ee2eae73ed1e4044c8dd9536dd4ac1be6d8b'
 @version = '1.53'
-@release = '2'
+@release = '3'
 @license = 'GPLv2 and LGPLv2.1'
 @buildrequires = [
   'zlib-devel',
@@ -19,6 +19,9 @@ require 'erb'
   'docs/*',
 ]
 @changelog = '
+* Sun Nov 22 2015 Matthias Saou <matthias@saou.eu> 1.53-3.ccf1ee2eae
+- Update to latest git code.
+
 * Sun Nov 16 2014 Matthias Saou <matthias@saou.eu> 1.53-1.85ceb4bf4a
 - Set correct version.
 

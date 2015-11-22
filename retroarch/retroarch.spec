@@ -1,9 +1,9 @@
-%global commit 8b41762639
-%global longcommit 8b4176263988e750daf0c6d709fdceb4672e111e
+%global commit 589b92cc99
+%global longcommit 589b92cc9932ae4bc8b669bbb4d5a6aa647de345
 
 Name:           retroarch
-Version:        1.0.0.3
-Release:        0.1.%{commit}%{?dist}
+Version:        1.2.2
+Release:        1.%{commit}%{?dist}
 Summary:        Official reference frontend for libretro
 
 Group:          Applications/Emulators
@@ -69,6 +69,9 @@ sed -i \
 
 
 %changelog
+* Sun Nov 22 2015 Matthias Saou <matthias@saou.eu> 1.2.2-1.589b92cc99
+- Update to 1.2.2.
+
 * Wed Dec 24 2014 Matthias Saou <matthias@saou.eu> 1.0.0.3-0.2.8b41762639
 - Update to latest git code.
 
