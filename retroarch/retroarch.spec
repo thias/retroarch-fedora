@@ -1,8 +1,9 @@
-%global commit 589b92cc99
-%global longcommit 589b92cc9932ae4bc8b669bbb4d5a6aa647de345
+%global commit 6690711ace
+%global longcommit 6690711ace3fe146d720d8755528bee8d8d87dd8
+%global assets_commit e1c5f1ae32
 
 Name:           retroarch
-Version:        1.2.2
+Version:        1.3.4
 Release:        1.%{commit}%{?dist}
 Summary:        Official reference frontend for libretro
 
@@ -10,6 +11,7 @@ Group:          Applications/Emulators
 License:        GPLv3+
 URL:            http://www.libretro.com/
 Source0:        https://github.com/libretro/RetroArch/archive/%{commit}.tar.gz
+Source1:        https://github.com/libretro/retroarch-assets/archive/%{assets_commit}.tar.gz
 
 BuildRequires:  libX11-devel
 BuildRequires:  libXv-devel
@@ -48,27 +50,36 @@ make %{?_smp_mflags}
 
 %install
 make install DESTDIR=%{buildroot}
-install -m 0755 tools/retroarch-joyconfig \
-  %{buildroot}%{_prefix}/bin/retroarch-joyconfig
 # Configuration changes
 sed -i \
   's|^# libretro_directory.*|libretro_directory = "/usr/libexec/libretro"|;
    s|^# libretro_info_path.*|libretro_info_path = "/usr/libexec/libretro"|;
+   s|^# menu_driver.*|menu_driver = "xmb"|;
+   s|^# assets_directory.*|assets_directory = "/usr/share/retroarch/assets/"|;
    s|^# joypad_autoconfig_dir.*|joypad_autoconfig_dir = "/etc/retroarch/joypad"|' \
   %{buildroot}/etc/retroarch.cfg
 
+mkdir -p %{buildroot}/%{_datadir}/retroarch/assets/
+pushd %{buildroot}/%{_datadir}/retroarch/assets/
+tar -x --gunzip --strip-components=1 -f %{SOURCE1}
+popd
 
 %files
 %doc README.md
 %config /etc/retroarch.cfg
 %{_prefix}/bin/retroarch
 %{_prefix}/bin/retroarch-cg2glsl
-%{_prefix}/bin/retroarch-joyconfig
 %{_prefix}/share/man/man1/*.1*
 %{_prefix}/share/pixmaps/retroarch.*
+%{_datadir}/applications/retroarch.desktop
+%{_datadir}/retroarch/
 
 
 %changelog
+* Fri May 06 2016 Bastien Nocera <hadess@hadess.net> 1.3.4-1.6690711ace
+- Update to 1.3.4.
+- Default to nicer XMB menu
+
 * Sun Nov 22 2015 Matthias Saou <matthias@saou.eu> 1.2.2-1.589b92cc99
 - Update to 1.2.2.
 

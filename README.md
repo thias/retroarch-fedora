@@ -61,7 +61,7 @@ rm -rf ~/.config/retroarch
 * Find out which subprojects are useful and package them too :
  * `libretro/common-shaders.git`
  * `libretro/common-overlays.git`
- * `libretro/retroarch-assets.git`
+ * `libretro/retroarch-assets.git` (included in retroarch itself)
  * `libretro/retroarch-joypad-autoconfig.git` (done, very useful!)
 
 * Disable default input_toggle_fast_forward = "space" !!
