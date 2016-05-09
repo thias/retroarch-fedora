@@ -1,6 +1,7 @@
 %global commit 6690711ace
 %global longcommit 6690711ace3fe146d720d8755528bee8d8d87dd8
 %global assets_commit e1c5f1ae32
+%global assets_longcommit e1c5f1ae3246ed032efaaa741c977a5dba1272e0
 
 Name:           retroarch
 Version:        1.3.4
@@ -39,7 +40,7 @@ cores also in their own programs or devices.
 
 
 %prep
-%setup -q -n RetroArch-%{longcommit}
+%setup -q -n RetroArch-%{longcommit} -a 1
 
 
 %build
@@ -55,14 +56,13 @@ sed -i \
   's|^# libretro_directory.*|libretro_directory = "/usr/libexec/libretro"|;
    s|^# libretro_info_path.*|libretro_info_path = "/usr/libexec/libretro"|;
    s|^# menu_driver.*|menu_driver = "xmb"|;
-   s|^# assets_directory.*|assets_directory = "/usr/share/retroarch/assets/"|;
+   s|^# assets_directory.*|assets_directory = "/usr/share/retroarch/assets"|;
    s|^# joypad_autoconfig_dir.*|joypad_autoconfig_dir = "/etc/retroarch/joypad"|' \
   %{buildroot}/etc/retroarch.cfg
 
-mkdir -p %{buildroot}/%{_datadir}/retroarch/assets/
-pushd %{buildroot}/%{_datadir}/retroarch/assets/
-tar -x --gunzip --strip-components=1 -f %{SOURCE1}
-popd
+mkdir -p %{buildroot}/%{_datadir}/retroarch/assets
+cp -a retroarch-assets-%{assets_longcommit}/* \
+  %{buildroot}/%{_datadir}/retroarch/assets/
 
 %files
 %doc README.md
@@ -76,6 +76,9 @@ popd
 
 
 %changelog
+* Mon May 09 2016 Matthias Saou <matthias@saou.eu> 1.3.4-2.6690711ace
+- Minor spec file cleanups.
+
 * Fri May 06 2016 Bastien Nocera <hadess@hadess.net> 1.3.4-1.6690711ace
 - Update to 1.3.4.
 - Default to nicer XMB menu
