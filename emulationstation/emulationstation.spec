@@ -3,7 +3,7 @@
 
 Name:           emulationstation
 Version:        2.0.1a
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Graphical front-end for emulators with controller navigation
 
 Group:          Applications/Emulators
@@ -12,6 +12,7 @@ URL:            http://emulationstation.org/
 Source0:        https://github.com/Aloshi/EmulationStation/archive/%{commit}.tar.gz
 Source1:        http://emulationstation.org/downloads/themes/simple_latest.zip
 Source2:        emulationstation.desktop
+Patch0:         emulationstation-2.0.1a-float.patch
 
 BuildRequires:  cmake
 BuildRequires:  SDL2-devel
@@ -31,6 +32,7 @@ Graphical front-end for emulators with controller navigation.
 
 %prep
 %setup -q -n EmulationStation-%{longcommit} -a 1
+%patch0 -p1
 
 
 %build
@@ -77,6 +79,10 @@ fi
 
 
 %changelog
+* Sun Jul 31 2016 Matthias Saou <matthias@saou.eu> 2.0.1a-2
+- Rebuild for Fedora 24.
+- Include required fix from @ebrius (gh #594).
+
 * Thu May 28 2015 Matthias Saou <matthias@saou.eu> 2.0.1a-1
 - Update to the latest 646bede3d9.
 
